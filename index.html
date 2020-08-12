@@ -9,6 +9,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
 
@@ -16,25 +17,27 @@
     <header class="header">
       <img
         width="68"
-        src="/assets/image/Film..png"
+        src="/assets/image/Film..svg"
         alt="Logo: film"
         class="logo"
       />
       <div class="line"></div>
-      <input
-        type="text"
-        class="search-input"
-        placeholder="Поиск по фильмам..."
-      />
-      <nav class="navigation">
-        <a href="#" class="navigation-link">Фильмы</a>
-        <a href="#" class="navigation-link">ТВ</a>
-        <a href="#" class="navigation-link">Новости</a>
-        <a href="#" class="navigation-link">О сервисе</a>
-      </nav>
-      <div class="button-group">
-        <button class="button sign-up">Регистрация</button>
-        <button class="button login">Войти</button>
+      <div class="m-menu">
+        <input
+          type="text"
+          class="search-input"
+          placeholder="Поиск по фильмам..."
+        />
+        <nav class="navigation">
+          <a href="#" class="navigation-link">Фильмы</a>
+          <a href="#" class="navigation-link">ТВ</a>
+          <a href="#" class="navigation-link">Новости</a>
+          <a href="#" class="navigation-link">О сервисе</a>
+        </nav>
+        <div class="button-group">
+          <button class="button sign-up">Регистрация</button>
+          <button class="button login">Войти</button>
+        </div>
       </div>
       <div class="mobile-buttons">
         <button class="search-button">
@@ -52,14 +55,18 @@
         <div class="film-wrapper">
           <div class="film-trailer">
             <img src="assets/image/poster.jpg" alt="Poster" class="poster" />
-            <button class="trailer-button">
+            <a
+              class="trailer-button"
+              data-fancybox
+              href="https://www.youtube.com/watch?v=84a2VD68hJU"
+            >
               <img
                 class="trailer-button-icon"
                 src="assets/image/play.svg"
                 alt="play"
               />
               <span class="trailer-button-text">Посмотреть трейлер</span>
-            </button>
+            </a>
           </div>
           <!-- /.film-trailer -->
           <div class="film-text">
@@ -227,5 +234,8 @@
         </div>
       </div>
     </section>
+    <script src="assets/js/jQuery.js"></script>
+    <script src="assets/js/jquery.fancybox.min.js"></script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
