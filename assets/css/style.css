@@ -255,6 +255,9 @@ body {
 .tabs {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  max-width: 260px;
+  margin-bottom: 60px;
 }
 
 .section-title {
@@ -280,15 +283,23 @@ body {
   flex-basis: 25%;
   margin-bottom: 35px;
 }
-
+.tab {
+  cursor: pointer;
+}
 .actor {
   margin-left: 20px;
 }
 
 .tabs-content {
-  display: flex;
+  display: none;
   align-items: center;
   flex-wrap: wrap;
+  visibility: hidden;
+}
+
+.tabs-content.visible {
+  visibility: visible;
+  display: flex;
 }
 
 .name {
@@ -436,6 +447,17 @@ body {
   }
 }
 
+.button-next {
+  display: none;
+  background: transparent;
+  border: none;
+  width: 25px;
+  height: 21.72;
+  right: 0;
+  top: 50%;
+
+  position: absolute;
+}
 @media (max-width: 953px) {
   .navigation {
     display: none;
@@ -568,6 +590,21 @@ body {
 }
 
 @media (max-width: 576px) {
+  .news-card {
+    max-width: 90%;
+  }
+  .button-next {
+    display: inline;
+    background: transparent;
+    border: none;
+    top: 50%;
+    right: 8px;
+    width: 25px;
+    height: 21.72;
+    transform: translateY(-50%);
+    z-index: 999;
+    cursor: pointer;
+  }
   .film-trailer {
     margin-bottom: 30px;
   }
